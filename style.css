@@ -179,7 +179,9 @@ header h1 {
 .menu-container {
     cursor: pointer;
 }
-
+.menu-nav a:hover {
+    color: #FFC107;
+}
 
 
 .hero {
@@ -352,7 +354,7 @@ footer ul li a {
     .menu-nav {
         display: none; /* Ocultamos el menú por defecto en pantallas pequeñas */
     }
-
+    
     .menu-nav.active {
         display: block; /* Mostramos el menú cuando tenga la clase 'active' */
     }
