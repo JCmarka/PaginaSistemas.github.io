@@ -173,7 +173,7 @@ header h1 {
 
 /* Estilos generales para el menú nav */
 .menu-nav {
-    display: block; /* El menú se muestra normalmente en pantallas grandes */
+    display: block; /* El menú se muestra normalmente en pantallas grandes*/
 }
 
 .menu-container {
