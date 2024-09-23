@@ -20,6 +20,7 @@ html {
 
 /* Estilos Generales */
 body {
+    
     font-family: "Sofadi One", system-ui,'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -30,14 +31,22 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    padding-top: 172px; /* Este valor debería ser igual a la altura del header */
+    
 }
 
 /* Header */
 header {
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Lo coloca en la parte superior de la página */
+    left: 0;
+    width: 100%; /* Asegura que el header ocupe todo el ancho */
+    z-index: 11111; /* Asegura que esté por encima de otros elementos */
     background: #007BFF; /* Color corporativo */
     color: white;
     padding: 20px 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Añade una sombra para destacarlo */
 }
 
 header nav ul {
@@ -166,6 +175,7 @@ header nav ul li a {
 .menu-container {
     cursor: pointer;
 }
+
 
 
 .hero {
@@ -343,7 +353,9 @@ footer ul li a {
     .menu-container {
         display: block; /* Mantenemos el icono del menú visible */
     }
-
+    body {
+        padding-top: 115px; /* Este valor debería ser igual a la altura del header */
+    }
     /* Otros ajustes específicos para pantallas pequeñas */
     #sobre-nosotros {
         flex-direction: column;
