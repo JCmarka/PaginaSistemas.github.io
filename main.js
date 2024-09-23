@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             const sectionID = this.getAttribute('href');
             const section = document.querySelector(sectionID);
-            const offset = 170; // Altura del header
+            const offset = 180; // Altura del header
             const top = section.getBoundingClientRect().top + window.scrollY - offset;
         
             window.scrollTo({ top, behavior: 'smooth' });

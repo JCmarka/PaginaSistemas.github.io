@@ -31,7 +31,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 172px; /* Este valor debería ser igual a la altura del header */
+    padding-top: 178px; /* Este valor debería ser igual a la altura del header */
     
 }
 
@@ -63,6 +63,10 @@ header nav ul li a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: bold;
+}
+
+header h1 {
+    font-size: 3rem; /* Ajusta el tamaño según lo desees */
 }
 
 .logo-titulo-container-grid {
@@ -358,7 +362,7 @@ footer ul li a {
         display: block; /* Mantenemos el icono del menú visible */
     }
     body {
-        padding-top: 113px; /* Este valor debería ser igual a la altura del header */
+        padding-top: 160px; /* Este valor debería ser igual a la altura del header */
     }
     /* Otros ajustes específicos para pantallas pequeñas */
     #sobre-nosotros {
