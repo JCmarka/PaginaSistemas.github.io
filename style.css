@@ -51,7 +51,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: bold;
 }
@@ -158,6 +158,14 @@ header nav ul li a {
     }
 }
 
+/* Estilos generales para el menú nav */
+.menu-nav {
+    display: block; /* El menú se muestra normalmente en pantallas grandes */
+}
+
+.menu-container {
+    cursor: pointer;
+}
 
 
 .hero {
@@ -320,20 +328,39 @@ footer ul li a {
     color: white;
     text-decoration: none;
 }
+
+/* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
+    .menu-nav {
+        display: none; /* Ocultamos el menú por defecto en pantallas pequeñas */
+    }
+
+    .menu-nav.active {
+        display: block; /* Mostramos el menú cuando tenga la clase 'active' */
+    }
+
+    /* Ajusta la visualización de los elementos de acuerdo a tu diseño */
+    .menu-container {
+        display: block; /* Mantenemos el icono del menú visible */
+    }
+
+    /* Otros ajustes específicos para pantallas pequeñas */
     #sobre-nosotros {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        text-align: center; /* Centra el texto */
+        flex-direction: column;
+        text-align: center;
     }
+
     .hero {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        text-align: center; /* Centra el texto */
+        flex-direction: column;
+        text-align: center;
     }
+
     .hero-imagen {
         display: none;
     }
+
     .texto, .sobre-nosotros-imagen {
-        flex: none; /* Evita que tomen el 50% */
-        margin-bottom: 20px; /* Espacio entre las secciones */
+        flex: none;
+        margin-bottom: 20px;
     }
 }

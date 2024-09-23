@@ -33,3 +33,25 @@ document.addEventListener("DOMContentLoaded", () => {
     // Otras funcionalidades que quieras agregar
     console.log("Las funcionalidades de la página se han cargado correctamente.");
 });
+
+
+// Seleccionamos el icono del menú y el contenedor del menú nav
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+// Función para alternar el menú al hacer clic en el icono
+menuToggle.addEventListener('click', function(event) {
+    navMenu.classList.toggle('active');
+    event.stopPropagation(); // Detenemos la propagación del clic para que no cierre el menú inmediatamente
+});
+
+// Función para cerrar el menú si se hace clic fuera de él
+document.addEventListener('click', function(event) {
+    const isClickInsideMenu = navMenu.contains(event.target);
+    const isClickOnMenuIcon = menuToggle.contains(event.target);
+
+    // Si el clic no es dentro del menú ni en el icono, cerramos el menú
+    if (!isClickInsideMenu && !isClickOnMenuIcon) {
+        navMenu.classList.remove('active');
+    }
+});

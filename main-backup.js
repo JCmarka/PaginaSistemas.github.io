@@ -33,3 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Funcionalidades mínimas implementadas
     console.log("Se han cargado funcionalidades mínimas.");
 });
+
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.toggle('active'); // Añade o quita la clase 'active'
+});
