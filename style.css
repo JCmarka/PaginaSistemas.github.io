@@ -281,6 +281,10 @@ section {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+#inicio-id {
+    padding: 0;
+}
+
 h2 {
     color: #007BFF; /* Color de encabezado */
 }
@@ -354,7 +358,7 @@ footer ul li a {
         display: block; /* Mantenemos el icono del menú visible */
     }
     body {
-        padding-top: 115px; /* Este valor debería ser igual a la altura del header */
+        padding-top: 113px; /* Este valor debería ser igual a la altura del header */
     }
     /* Otros ajustes específicos para pantallas pequeñas */
     #sobre-nosotros {
