@@ -65,6 +65,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // Obtener todos los enlaces en el menú
+    const links = document.querySelectorAll('.menu-nav a');
+
+    // Agregar un evento de clic a cada enlace
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            // Eliminar la clase 'active' de todos los enlaces
+            links.forEach(item => item.classList.remove('active'));
+            // Agregar la clase 'active' al enlace que se hizo clic
+            this.classList.add('active');
+        });
+    });
     // Otras funcionalidades que quieras agregar
     console.log("Las funcionalidades de la página se han cargado correctamente.");
 });

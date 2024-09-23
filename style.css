@@ -183,6 +183,13 @@ header h1 {
     color: #FFC107;
 }
 
+.menu-nav a {
+    transition: color 1s ease; /* Ajusta la duración y el tipo de transición */
+}
+
+.menu-nav a.active {
+    color: #fa6cee; /* Color al hacer clic */
+}
 
 .hero {
     background-image: linear-gradient(-45deg,rgb(255, 6, 222),orange, #f5f5f5);
