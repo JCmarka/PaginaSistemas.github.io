@@ -393,3 +393,14 @@ footer ul li a {
         margin-bottom: 20px;
     }
 }
+@media only screen and (orientation: landscape) {
+    header {
+        height: 8vh; /* Reducimos la altura del header en landscape */
+    }
+    header h1 {
+        font-size: 1.3rem; /* Ajustamos el tamaño del título */
+    }
+    nav a {
+        font-size: 0.9rem; /* Enlaces del menú más pequeños */
+    }
+}
