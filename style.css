@@ -70,7 +70,7 @@ header h1 {
 }
 /* Transición suave para el header al ocultarse y mostrarse */
 #header-id {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.55s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     position: fixed;
     width: 100%;
     top: 0;
