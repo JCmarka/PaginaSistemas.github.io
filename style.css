@@ -31,7 +31,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 15vh; /* Este valor debería ser igual a la altura del header */
+    padding-top: 20vh; /* Este valor debería ser igual a la altura del header */
     
 }
 
@@ -44,7 +44,7 @@ header {
     z-index: 11111; /* Asegura que esté por encima de otros elementos */
     background: #007BFF; /* Color corporativo */
     color: white;
-    padding: 20px 0;
+    padding: 0.3vh 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Añade una sombra para destacarlo */
 }
@@ -67,6 +67,20 @@ header nav ul li a {
 
 header h1 {
     font-size: 3rem; /* Ajusta el tamaño según lo desees */
+}
+/* Transición suave para el header al ocultarse y mostrarse */
+#header-id {
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999; /* Asegura que esté siempre visible */
+}
+
+/* Clase para ocultar el header */
+.header-hidden {
+    transform: translateY(-100%); /* Oculta el header */
 }
 
 .logo-titulo-container-grid {

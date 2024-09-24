@@ -2,7 +2,25 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("main.js cargado correctamente");
+    // Detectar el scroll y ocultar/mostrar el header
+    let lastScrollTop = 0;
+    const header = document.getElementById("header-id");
 
+    window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Desplazamiento hacia abajo - ocultamos el header
+            
+            header.classList.add("header-hidden");
+            //console.log("hacia abajo")
+        } else {
+            // Desplazamiento hacia arriba - mostramos el header
+            header.classList.remove("header-hidden");
+            //console.log("hacia arriba")
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para evitar valores negativos en scroll
+    });
     // Función para manejar el envío de formularios de contacto
     const form = document.querySelector("#contacto form");
     form.addEventListener("submit", (event) => {
@@ -52,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Si el clic no es dentro del menú ni en el icono, cerramos el menú
         if (!isClickInsideMenu && !isClickOnMenuIcon) {
             navMenu.classList.remove('active');
+            header.classList.add("header-hidden");
         }
     });
 
